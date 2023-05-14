@@ -1,0 +1,15 @@
+using System;
+
+namespace kjllk
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double cent = double.Parse(Console.ReadLine());
+            double convToInches = cent * 2.54;
+
+            Console.WriteLine($"{convToInches:f2}");
+        }
+    }
+}
