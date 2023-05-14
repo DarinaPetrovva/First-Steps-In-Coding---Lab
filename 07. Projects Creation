@@ -1,0 +1,21 @@
+using System;
+
+namespace kjllk
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+            int projects = int.Parse(Console.ReadLine());
+            int hours = projects * 3;
+            if (projects < 0 || projects > 100)
+            {
+                throw new ArgumentException("Enter a projects value between 0 and 100");
+                
+            }
+            Console.WriteLine($"The architect {name} will need {hours} " +
+                $"hours to complete {projects} project/s.");
+        }
+    }
+}
