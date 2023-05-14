@@ -1,0 +1,25 @@
+using System;
+
+namespace kjllk
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double kMeters = double.Parse(Console.ReadLine());
+            if (kMeters < 0.00 || kMeters > 10000.00)
+            {
+                throw new ArgumentException("Enter a valid kMeters between 0.00 nad 10000.00");
+            }
+
+            double sumWithDDS = kMeters * 7.61;
+            double sumwithDiscount = sumWithDDS * 0.18;
+            double discount = sumWithDDS - sumwithDiscount;
+
+            Console.WriteLine($"The discount is: {discount} lv.");
+            Console.WriteLine($"The final price is: {sumwithDiscount} lv.");
+          
+          
+        }
+    }
+}
