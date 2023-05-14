@@ -1,0 +1,25 @@
+using System;
+
+namespace kjllk
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int dogsFood = int.Parse(Console.ReadLine());
+            int catsFood = int.Parse(Console.ReadLine());
+
+            if (dogsFood < 0 || catsFood < 0 || dogsFood > 100 || catsFood > 100)
+            {
+                throw new ArgumentException("Enter a valid dog's or cat's food value");
+            }
+
+            double dogsSum = dogsFood * 2.5;
+            double catsSum = catsFood * 4;
+
+            double sum = dogsSum + catsSum;
+
+            Console.WriteLine($"{sum} lv.");
+        }
+    }
+}
